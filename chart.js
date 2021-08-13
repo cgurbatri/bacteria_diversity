@@ -129,7 +129,7 @@ function buildCharts(sample) {
         var washfreq = parseInt(resultArray)
     var gaugeData = [
       {
-        // domain: { x: [0, 1], y: [0, 1] },
+        domain: { x: [0, 1], y: [0, 1] },
         value: washfreq,
         title: { text: "Washing Frequency" },
         type: "indicator",
@@ -148,7 +148,7 @@ function buildCharts(sample) {
             value: 10
           }
         }
-        // bgcolor:
+        bgcolor: "black"
       }
     ];
     
@@ -156,6 +156,8 @@ function buildCharts(sample) {
       width: 200,
       height: 370,
       margin: { t: 25, r: 25, l: 25, b: 25 },
+      paper_bgcolor: "lavender",
+      font: { color: "darkblue", family: "Arial" }
 
     Plotly.newPlot('gauge', gaugeData, gaugeLayout)
 
