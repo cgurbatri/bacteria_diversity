@@ -137,7 +137,7 @@ function buildCharts(sample) {
 
         // delta: { reference: 380 },
         gauge: {
-          axis: { range: [0, 10], tickcolor: "darkblue" }
+          axis: { range: [0, 10], tickcolor: "darkblue" },
           steps: [
             { range: [0, 5], color: "lightgray" },
             { range: [5, 10], color: "gray" }
@@ -157,8 +157,8 @@ function buildCharts(sample) {
       height: 370,
       margin: { t: 25, r: 25, l: 25, b: 25 },
 
-    Plotly.newPlot('gauge', gaugeData, gaugeLayout);
+    Plotly.newPlot('gauge', gaugeData, gaugeLayout)
 
     
-  });
-}
+  }
+})};
