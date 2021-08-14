@@ -115,45 +115,39 @@ function buildCharts(sample) {
     Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
 
 // Gauge Chart https://plotly.com/javascript/gauge-charts/
-function gauge(dataID) {
-  var gaugeData = [
-      {
-          domain: { x: [0, 1], y: [0, 1] },
-          value: wfreq, //Washing frequency
-          title: { text: "Washing frequency" },
-          type: "indicator",
+    var gaugeData = [
+        {
+            domain: { x: [0, 1], y: [0, 1] },
+            value: wfreq, //Washing frequency
+            title: { text: "Washing frequency" },
+            type: "indicator",
 
-          mode: "gauge+number",
-          delta: { reference: 4, increasing: { color: 'green' } },
-          gauge: {
-              axis: { range: [0, 9], tickwidth: 1, tickcolor: "darkblue" },
-              bar:{color: 'blue'},
-              steps: [
-                  { range: [0, 5], color: "red" },
-                  { range: [5, 10], color: "green" }
-              ],
-              threshold: {
-                  line: { color: "grey", width: 4 },
-                  thickness: 1,
-                  value: 9
-              }
-          },
-          bgcolor: "lavender",
-      }
-  ];
-  var gaugeLayout = {
-      width: 200,
-      height: 370,
-      margin: { t: 25, r: 25, l: 25, b: 25 },
-      paper_bgcolor: "lavender",
-      font: { color: "darkblue", family: "Arial" }
-  };
+            mode: "gauge+number",
+            delta: { reference: 4, increasing: { color: 'green' } },
+            gauge: {
+                axis: { range: [0, 9], tickwidth: 1, tickcolor: "darkblue" },
+                bar:{color: 'blue'},
+                steps: [
+                    { range: [0, 5], color: "red" },
+                    { range: [5, 10], color: "green" }
+                ],
+                threshold: {
+                    line: { color: "grey", width: 4 },
+                    thickness: 1,
+                    value: 9
+                }
+            },
+            // bgcolor: "lavender",
+        }
+    ];
+    var gaugeLayout = {
+        width: 200,
+        height: 370,
+        margin: { t: 25, r: 25, l: 25, b: 25 },
+        font: { color: "darkblue", family: "Arial" }
+    };
 
-  
-  Plotly.newPlot('gauge', gaugeData, gaugeLayout);
-}
-horizontalChart(sampleId)
-bubbleChart(sampleId)
-gauge(sampleId)
+
+    Plotly.newPlot('gauge', gaugeData, gaugeLayout);
 })
 };
