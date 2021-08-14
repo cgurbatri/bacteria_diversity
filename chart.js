@@ -115,6 +115,7 @@ function buildCharts(sample) {
     Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
 
 // Gauge Chart https://plotly.com/javascript/gauge-charts/
+    var washfreq = parseInt(resultArray)
     var gaugeData = [
         {
             domain: { x: [0, 1], y: [0, 1] },
