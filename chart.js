@@ -142,10 +142,10 @@ function buildCharts(sample) {
         }
     ];
     var gaugeLayout = {
-        width: 200,
-        height: 370,
+        width: 650,
+        height: 450,
         // margin: { t: 25, r: 25, l: 25, b: 25 },
-        // font: { color: "darkblue", family: "Arial" }
+        font: { color: "darkblue", family: "Arial" }
     };
 
 
