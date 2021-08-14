@@ -116,21 +116,21 @@ function buildCharts(sample) {
 
 // Gauge Chart https://plotly.com/javascript/gauge-charts/
 function gauge(dataID) {
-  var data = [
+  var gaugeData = [
       {
           domain: { x: [0, 1], y: [0, 1] },
           value: wfreq, //Washing frequency
           title: { text: "Washing frequency" },
           type: "indicator",
 
-          mode: "gauge+number+delta",
+          mode: "gauge+number",
           delta: { reference: 4, increasing: { color: 'green' } },
           gauge: {
               axis: { range: [0, 9], tickwidth: 1, tickcolor: "darkblue" },
               bar:{color: 'blue'},
               steps: [
-                  { range: [0, 4], color: "red" },
-                  { range: [4, 9], color: "green" }
+                  { range: [0, 5], color: "red" },
+                  { range: [5, 10], color: "green" }
               ],
               threshold: {
                   line: { color: "grey", width: 4 },
@@ -141,7 +141,7 @@ function gauge(dataID) {
           bgcolor: "lavender",
       }
   ];
-  var layout = {
+  var gaugeLayout = {
       width: 200,
       height: 370,
       margin: { t: 25, r: 25, l: 25, b: 25 },
@@ -150,7 +150,7 @@ function gauge(dataID) {
   };
 
   
-  Plotly.newPlot('gauge', data, layout);
+  Plotly.newPlot('gauge', gaugeData, gaugeLayout);
 }
 horizontalChart(sampleId)
 bubbleChart(sampleId)
