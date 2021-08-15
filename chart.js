@@ -126,11 +126,14 @@ function buildCharts(sample) {
             mode: "gauge+number",
             // delta: { reference: 4, increasing: { color: 'green' } },
             gauge: {
-                axis: { range: [0, 9], tickwidth: 1, tickcolor: "darkblue" },
+                axis: { range: [0, 10], tickwidth: 1, tickcolor: "darkblue" },
                 bar:{color: 'blue'},
                 steps: [
-                    { range: [0, 5], color: "red" },
-                    { range: [5, 10], color: "green" }
+                  { range: [0, 2], color: 'red' },
+                  { range: [2, 4], color: 'orange' },
+                  { range: [4, 6], color: 'yellow' },
+                  { range: [6, 8], color: 'green' },
+                  { range: [8, 10], color: 'blue' },
                 ],
                 threshold: {
                     line: { color: "grey", width: 4 },
@@ -145,7 +148,7 @@ function buildCharts(sample) {
         width: 650,
         height: 450,
         // margin: { t: 25, r: 25, l: 25, b: 25 },
-        font: { color: "darkblue", family: "Arial" }
+        // font: { color: "darkblue", family: "Arial" }
     };
 
 
