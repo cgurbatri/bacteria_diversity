@@ -127,7 +127,7 @@ function buildCharts(sample) {
             // delta: { reference: 4, increasing: { color: 'green' } },
             gauge: {
                 axis: { range: [0, 10], tickwidth: 1, tickcolor: "darkblue" },
-                bar:{color: 'blue'},
+                bar:{color: 'black'},
                 steps: [
                   { range: [0, 2], color: 'red' },
                   { range: [2, 4], color: 'orange' },
