@@ -135,11 +135,10 @@ function buildCharts(sample) {
                   { range: [6, 8], color: 'green' },
                   { range: [8, 10], color: 'blue' },
                 ],
-                // threshold: {
-                //     line: { color: "darkblue", width: 4 },
-                //     thickness: 1,
-                //     value: 9
-                // }
+                threshold: {
+                  line: { color: "darkblue", width: 4 },
+                  thickness: 1,
+                }
             },
             // bgcolor: "lavender",
         }
