@@ -115,11 +115,15 @@ function buildCharts(sample) {
     Plotly.newPlot("bubble", bubbleData, bubbleLayout); 
 
 // Gauge Chart https://plotly.com/javascript/gauge-charts/
+    var metadata = data.metadata;
+    // Filter the data for the object with the desired sample number
+    var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
+    var result = resultArray[0];
 
-    var wfreq = parseInt(filteredArray)
+    var wfreq = parseInt(result.wfreq)
     var gaugeData = [
         {
-            // domain: { x: [0, 1], y: [0, 1] },
+            domain: { x: [0, 1], y: [0, 1] },
             value: wfreq, //Washing frequency
             title: { text: "Washing frequency" },
             type: "indicator",
@@ -147,10 +151,7 @@ function buildCharts(sample) {
         width: 650,
         height: 450,
         margin: { t: 0, b: 0 } 
-        // margin: { t: 25, r: 25, l: 25, b: 25 },
-        // font: { color: "darkblue", family: "Arial" }
     };
-
 
     Plotly.newPlot('gauge', gaugeData, gaugeLayout);
     
